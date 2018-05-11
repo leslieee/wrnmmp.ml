@@ -32,7 +32,7 @@ $startURL = "";
 //When no $startURL is configured above, miniProxy will show its own landing page with a URL form field
 //and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,
 //and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.
-$landingExampleURL = "https://example.net";
+$landingExampleURL = "https://google.com";
 
 /****************************** END CONFIGURATION ******************************/
 
@@ -276,7 +276,25 @@ if (isset($_POST["miniProxyFormAction"])) {
 }
 if (empty($url)) {
     if (empty($startURL)) {
-      die("<html><head><title>miniProxy</title></head><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form></body></html>");
+      die("<html>
+      <head>
+      <title>我有橘麻麦皮不知当桨不当桨</title>
+      <style type=\"text/css\"> 
+      body{
+        text-align:center;
+      } 
+      </style>
+      </head>
+      <body>
+      <img src=\"/mogu.jpg\" /><h1></h1>
+      你可以简单的调用就像这样: <br /><a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />
+      或者直接输入网址:<br /><br />
+      <form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\">
+      <input id=\"site\" type=\"text\" size=\"30\" />
+      <input type=\"submit\" value=\"当讲\" />
+      </form>
+      </body>
+      </html>");
     } else {
       $url = $startURL;
     }
