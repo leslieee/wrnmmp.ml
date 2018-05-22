@@ -278,7 +278,8 @@ if (empty($url)) {
     if (empty($startURL)) {
       die("<html>
       <head>
-      <meta charset=\"UTF-8\">
+      <meta charset=\"UTF-8\" />
+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no\" />
       <title>我有橘麻麦皮不知当桨不当桨</title>
       <style type=\"text/css\"> 
           body {
@@ -314,7 +315,7 @@ if (empty($url)) {
               // background-color: #3c8dbc;
               box-shadow: none;
               // color: #fff;
-              color: #3c8dbc;
+              color: #0000ff;
               text-decoration: none;
               box-sizing: border-box;
           }
@@ -339,8 +340,8 @@ if (empty($url)) {
       </head>
       <body>
       <img src=\"/mogu.jpg\" /><h1></h1>
-      你可以简单的调用就像这样: <br /><a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />
-      或者直接输入网址:<br /><br />
+      你可以简单的调用就像这样: <br /><a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br />
+      或者直接输入网址:<br />
       <form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\">
       <input id=\"site\" type=\"text\" size=\"30\" />
       <input type=\"submit\" value=\"当讲\" />
