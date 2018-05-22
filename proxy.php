@@ -94,7 +94,6 @@ $prefixPort = $usingDefaultPort ? "" : ":" . $_SERVER["SERVER_PORT"];
 $prefixHost = $_SERVER["HTTP_HOST"];
 $prefixHost = strpos($prefixHost, ":") ? implode(":", explode(":", $_SERVER["HTTP_HOST"], -1)) : $prefixHost;
 
-// define("PROXY_PREFIX", "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . "://" . $prefixHost . $prefixPort . $_SERVER["SCRIPT_NAME"] . "?");
 define("PROXY_PREFIX", "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . "://" . $prefixHost . $_SERVER["SCRIPT_NAME"] . "?");
 
 //Makes an HTTP request via cURL, using request data that was passed directly to this script.
@@ -279,11 +278,46 @@ if (empty($url)) {
     if (empty($startURL)) {
       die("<html>
       <head>
+      <meta charset=\"UTF-8\">
       <title>我有橘麻麦皮不知当桨不当桨</title>
       <style type=\"text/css\"> 
-      body{
-        text-align:center;
-      } 
+          body {
+              text-align:center;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+              font-weight: 400;
+              overflow-x: hidden;
+              overflow-y: auto;
+          }
+          a {
+              display: inline-block;
+              padding: 6px 12px;
+              margin-bottom: 8px;
+              margin-right: 3px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.42857143;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: middle;
+              -ms-touch-action: manipulation;
+              touch-action: manipulation;
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              background-image: none;
+              border: 1px solid transparent;
+              border-radius: 4px;
+              // background-color: #3c8dbc;
+              box-shadow: none;
+              // color: #fff;
+              color: #3c8dbc;
+              text-decoration: none;
+              box-sizing: border-box;
+          }
       </style>
       <script>  
         //清除所有cookie函数  
